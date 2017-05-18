@@ -14,7 +14,7 @@ using namespace ls;
 template <typename T>
 vector<T>::vector( size_t sz_ ) 
 {
-	m_len = 0;
+	m_len  = 0;
 	m_size = sz_;
 	m_data = new T[sz_ + 1 ]; //+1 en necessário para posicao extra end()
 }
@@ -22,7 +22,7 @@ vector<T>::vector( size_t sz_ )
 template <typename T>
 vector<T>::vector( ) 
 {
-	m_len = 0;
+	m_len  = 0;
 	m_size = DEFAULT_SIZE;
 	m_data = new T[ DEFAULT_SIZE + 1 ]; //+1 en necessário para posicao extra end()
 }	
@@ -32,6 +32,56 @@ vector<T>::~vector()
 {
 	delete [] m_data;
 }
+
+template <typename T>
+vector<T>::vector( const vector<T> & vector_ )
+{
+	m_len  = vector_.m_len;
+	m_size = vector_.m_size;
+	m_data = new T[ vector_.m_size + 1 ];
+
+	for (auto i = 0u; i < m_len; ++i)
+		m_data[i] = vector_.m_data[i];
+}
+
+/*template <typename T>
+vector<T>::vector( vector<T> && vector_ )
+{
+	TODO
+}*/
+
+template <typename T>
+vector<T>::vector( std::initializer_list<T> ilist )
+{
+	m_len  = ilist.size();
+	m_size = ilist.size();
+	m_data = new T[ ilist.size() + 1 ];
+
+	for (auto i = 0u; i < m_len; ++i)
+		m_data[i] = *(ilist.begin()+i);
+}
+
+//template < typename InputItr >
+
+//vector( InputItr, InputItr );
+
+/*template <typename T>
+vector<T>::vector & operator=( const vector<T> & vector_ )
+{
+	m_len  = vector_.m_len;
+	m_size = vector_.m_size;
+	m_data = new T[ vector_.m_size + 1 ];
+
+	for (auto i = 0u; i < m_len; ++i)
+		m_data[i] = vector_.m_data[i];
+}*/
+
+/*template <typename T>
+vector<T>::vector & operator=( vector<T> && vector_ )
+{
+	TODO
+}*/
+
 // [II] ITERATORS
 
 // [III] CAPACITY
@@ -169,16 +219,43 @@ const T & vector<T>::front ( void ) const
 }
 
 template <typename T>
+const T & vector<T>::operator[]( size_t pos ) const
+{
+	return m_data[pos];
+}
+
+template <typename T>
 T & vector<T>::operator[]( size_t pos )
 {
 	return m_data[pos];
 }
+
 template <typename T>
-T & vector<T>::at ( size_t pos ) const
+const T & vector<T>::at( size_t pos ) const
 {
 	if( pos < 0 or pos > m_len-1 )
 		throw std::out_of_range("[at()]: Position required is not within the range of the vector!");
 	return m_data[pos];
+}
+
+template <typename T>
+T & vector<T>::at( size_t pos )
+{
+	if( pos < 0 or pos > m_len-1 )
+		throw std::out_of_range("[at()]: Position required is not within the range of the vector!");
+	return m_data[pos];
+}
+
+template <typename T>
+T * vector<T>::data( void )
+{
+	return m_data;
+}
+
+template <typename T>
+const T & vector<T>::data( void ) const
+{
+	return m_data;
 }
 
 template <typename T>
@@ -191,5 +268,43 @@ void vector<T>::print( void ) const
 }
 
 // [VI] OPERATORS
+template <typename T>
+bool vector<T>::operator==( const vector<T> & vector_ ) const
+{
+	if( m_len != vector_.m_len )
+		return false; //if current size are different, the vectors are different
+
+	for (auto i = 0u; i < m_len; ++i)
+		if( m_data[i] != vector_.m_data[i] ) //if one of elements in the same position are different, the vectors are different
+			return false;
+
+	return true;
+}
+
+template <typename T>
+bool vector<T>::operator!=( const vector<T> & vector_ ) const
+{
+	return not operator==( vector_ );
+}
 
 // [VII] FRIEND FUNCTIONS
+/*template <typename T>
+friend std::ostream & vector<T>::operator<<( std::ostream & os_, const vector<T> & v_ )
+{
+
+}
+
+template <typename T>
+friend void vector<T>::swap( vector<T> & first_, vector<T> & second_ )
+{
+	vector<T>
+	T * temp = first_.m_data;
+
+    m_size = m_len; //capacity now is equal to current size
+	m_data = new T[ m_len + 1 ];
+
+	for (auto i = 0u; i < m_len; ++i)
+		m_data[i] = temp[i];
+
+	delete [] temp;
+}*/

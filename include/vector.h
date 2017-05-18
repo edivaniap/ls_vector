@@ -16,15 +16,7 @@
 #include <algorithm> // copy
 #include <iterator>  // ostream_iterator
 #include <cassert>  // assert
-
-
-      /*using size_type = size_t;
-		using iterator = MyIterator< T >
-		using const_iterator = MyIterator< const T >
-		using pointer = T *;
-		using reference = T &;
-		using const_reference = const T &;*/
-		
+#include <initializer_list> //initializer_list
 
 namespace ls
 {
@@ -32,7 +24,6 @@ namespace ls
 	class vector
 	{
 	private:
-
 		const static size_t DEFAULT_SIZE = 0; //!< Default size for the vector
 		size_t m_len; //<! Current list size (or index past-last valid elemen>
 		size_t m_size; //<! List’s storage capacity.
@@ -49,6 +40,22 @@ namespace ls
 
 		/*! @brief Destructs the list. */
 		~vector();
+
+		vector( const vector<T> & vector_ );
+
+		//vector( vector<T> && vector_ );
+
+		vector( std::initializer_list<T> ilist );
+
+		//template < typename InputItr >
+
+		//vector( InputItr, InputItr );
+
+		//vector & operator=( const vector<T> & vector_ );
+
+		//vector & operator=( vector<T> && vector_ );
+
+		//vector & operator=( std::initializer_list<T> ilist );
 
 		// [II] ITERATORS
 		/*iterator begin( void );
@@ -121,36 +128,41 @@ namespace ls
 		void assign( const T & value_ );
 
 		// [V] ELEMENT ACCESS
-		/*OK const_reference back( void ) const;
-		  OK const_reference front( void ) const;
-	const_reference operator[]( size_type ) const;
-	      OK reference operator[]( size_type );
-		  Ok const_reference at( size_type ) const;
-	reference at( size_type );
-	pointer data( void );
-	const_reference data( void ) const;*/
+
 		/*! @return The object at the end of the list.*/
 		const T & back ( void ) const;
 
 		/*! @return The object at the beginning of the list.*/
 		const T & front ( void ) const;
 
+		/*! @return The const object at the index pos in the array, with no bounds-checking. */
+		const T & operator[]( size_t pos ) const;
+
 		/*! @return The object at the index pos in the array, with no bounds-checking. */
 		T & operator[]( size_t pos );
 		
+		/*! @return The const object at the index pos in the array, with bounds-checking. */
+		const T & at( size_t pos ) const;
+
 		/*! @return The object at the index pos in the array, with bounds-checking. */
-		T & at ( size_t pos ) const;
+		T & at( size_t pos );
+
+		/*! @return A pointer to the first element in the array used internally by the vector. */
+		T * data( void );
+
+		/*! @return A const pointer to the first element in the array used internally by the vector. */
+		const T & data( void ) const;
 
 		/*! @brief Prints the vector, your length and capacity. */
 		void print( void ) const;
 
 		// [VI] OPERATORS
-		/*bool operator==( const Vector & ) const;
-		bool operator!=( const Vector & ) const;*/
+		bool operator==( const vector<T> & vector_ ) const;
+		bool operator!=( const vector<T> & vector_ ) const;
 
 		// [VII] FRIEND FUNCTIONS
-		/*friend std::ostream & operator <<( std::ostream & os_, const Vector<T> & v_ );
-		friend void swap( Vector<T> & first_, Vector<T> & second_ );*/
+		/*friend std::ostream & operator<<( std::ostream & os_, const vector<T> & v_ );
+		friend void swap( vector<T> & first_, vector<T> & second_ );*/
 
 	};
 }

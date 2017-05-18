@@ -110,7 +110,8 @@ int main()
         v.push_back("she");
 
         v.print();
-
+        v[1] = "change1";
+        v.at(2) = "change2";
         std::cout << "Elemento na posição 0 = " << v[0] << std::endl; 
         std::cout << "Elemento na posição 1 = " << v.at(1) << std::endl; 
         std::cout << "Elemento na posição 2 = " << v[2] << std::endl; 
@@ -121,5 +122,69 @@ int main()
         v.shrink_to_fit();
         std::cout << "vetor removeu as posições não usadas... agora capacity = len\n";
         v.print();
+    }
+
+    // Testando operator== e operator[]
+    {
+        std::cout << "\n\t>>>testando operator== and operator[]()\n";
+        std::cout << "\n\t>>>inicializando v2 com initializer_list\n";
+
+        ls::vector<float> v1;
+        ls::vector<float> v2 = { 0.1, 2.3, 0.8 };
+
+        v1.push_back(0.1);
+        v1.push_back(2.3);
+        v1.push_back(0.8);
+
+        std::cout << "vetor 1: ";
+        v1.print();
+        std::cout << "vetor 2: ";
+        v2.print();
+
+        assert( v1 == v2 );
+        if( v1 == v2 )
+            std::cout << "vetor 1 e 2 são iguais.\n\n";
+        else
+            std::cout << "vetor 1 e 2 são diferentes.\n\n";
+
+        v2[1] = 4.1;
+        std::cout << "vetor 1: ";
+        v1.print();
+        std::cout << "vetor 2: ";
+        v2.print();
+
+        assert( v1 != v2 );
+        if( v1 == v2 )
+            std::cout << "vetor 1 e 2 são iguais.\n\n";
+        else
+            std::cout << "vetor 1 e 2 são diferentes.\n\n";
+
+        v1[1] = 4.1;
+        v1.push_back(2.0);
+
+        std::cout << "vetor 1: ";
+        v1.print();
+        std::cout << "vetor 2: ";
+        v2.print();
+
+        assert( v1 != v2 );
+        if( v1 == v2 )
+            std::cout << "vetor 1 e 2 são iguais.\n\n";
+        else
+            std::cout << "vetor 1 e 2 são diferentes.\n\n";
+    }
+
+    //Testando constructors
+    {
+        ls::vector<char> A = { 'a', 'b', 'c' };
+        ls::vector<char> B(A);
+        ls::vector<char> C = A;
+
+        assert( A == B );
+        assert( A == C );
+
+        A.print();
+        B.print();
+        C.print();
     }
 }
