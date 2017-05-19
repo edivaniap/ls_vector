@@ -1,0 +1,37 @@
+\hypertarget{vector_8h}{}\section{include/vector.h File Reference}
+\label{vector_8h}\index{include/vector.\+h@{include/vector.\+h}}
+
+
+Class for \hyperlink{classls_1_1vector}{ls\+::vector} configuration.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$initializer\+\_\+list$>$}\\*
+Include dependency graph for vector.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classls_1_1vector}{ls\+::vector$<$ T $>$}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for \hyperlink{classls_1_1vector}{ls\+::vector} configuration. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16/05/2017 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Edivânia Pontes de Oliveira  Class \hyperlink{classls_1_1vector}{ls\+::vector} 
+\end{DoxyAuthor}

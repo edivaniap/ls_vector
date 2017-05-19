@@ -44,12 +44,6 @@ vector<T>::vector( const vector<T> & vector_ )
 		m_data[i] = vector_.m_data[i];
 }
 
-/*template <typename T>
-vector<T>::vector( vector<T> && vector_ )
-{
-	TODO
-}*/
-
 template <typename T>
 vector<T>::vector( std::initializer_list<T> ilist )
 {
@@ -60,27 +54,6 @@ vector<T>::vector( std::initializer_list<T> ilist )
 	for (auto i = 0u; i < m_len; ++i)
 		m_data[i] = *(ilist.begin()+i);
 }
-
-//template < typename InputItr >
-
-//vector( InputItr, InputItr );
-
-/*template <typename T>
-vector<T>::vector & operator=( const vector<T> & vector_ )
-{
-	m_len  = vector_.m_len;
-	m_size = vector_.m_size;
-	m_data = new T[ vector_.m_size + 1 ];
-
-	for (auto i = 0u; i < m_len; ++i)
-		m_data[i] = vector_.m_data[i];
-}*/
-
-/*template <typename T>
-vector<T>::vector & operator=( vector<T> && vector_ )
-{
-	TODO
-}*/
 
 // [II] ITERATORS
 
@@ -287,24 +260,3 @@ bool vector<T>::operator!=( const vector<T> & vector_ ) const
 	return not operator==( vector_ );
 }
 
-// [VII] FRIEND FUNCTIONS
-/*template <typename T>
-friend std::ostream & vector<T>::operator<<( std::ostream & os_, const vector<T> & v_ )
-{
-
-}
-
-template <typename T>
-friend void vector<T>::swap( vector<T> & first_, vector<T> & second_ )
-{
-	vector<T>
-	T * temp = first_.m_data;
-
-    m_size = m_len; //capacity now is equal to current size
-	m_data = new T[ m_len + 1 ];
-
-	for (auto i = 0u; i < m_len; ++i)
-		m_data[i] = temp[i];
-
-	delete [] temp;
-}*/

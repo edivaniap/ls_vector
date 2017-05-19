@@ -1,0 +1,315 @@
+\hypertarget{classls_1_1vector}{}\section{ls\+:\+:vector$<$ T $>$ Class Template Reference}
+\label{classls_1_1vector}\index{ls\+::vector$<$ T $>$@{ls\+::vector$<$ T $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classls_1_1vector_ac88b18c028485be68b3916bde93d7e19}{vector} (size\+\_\+t sz\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructs the list with logical size setted. \end{DoxyCompactList}\item 
+\hyperlink{classls_1_1vector_a28ed60409cde794caea6a40ec8d832b2}{vector} ()\hypertarget{classls_1_1vector_a28ed60409cde794caea6a40ec8d832b2}{}\label{classls_1_1vector_a28ed60409cde794caea6a40ec8d832b2}
+
+\begin{DoxyCompactList}\small\item\em Default constructor that creates an empty list. \end{DoxyCompactList}\item 
+\hyperlink{classls_1_1vector_a7f8c4cd49dff8799dd98cb3e84242eda}{$\sim$vector} ()\hypertarget{classls_1_1vector_a7f8c4cd49dff8799dd98cb3e84242eda}{}\label{classls_1_1vector_a7f8c4cd49dff8799dd98cb3e84242eda}
+
+\begin{DoxyCompactList}\small\item\em Destructs the list. \end{DoxyCompactList}\item 
+\hyperlink{classls_1_1vector_acf68a9a46e2398917f7f87cb6d6ef214}{vector} (const \hyperlink{classls_1_1vector}{vector}$<$ T $>$ \&vector\+\_\+)
+\begin{DoxyCompactList}\small\item\em Copy constructor. Constructs the list with the deep copy of the contents of other vector. \end{DoxyCompactList}\item 
+\hyperlink{classls_1_1vector_a26daeb7a8d46fd1d4036ede13599e97c}{vector} (std\+::initializer\+\_\+list$<$ T $>$ ilist)
+\begin{DoxyCompactList}\small\item\em Constructs the list with the contents of the initializer list. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classls_1_1vector_a4a84ae30c023098a222fd9fac055284f}{size} (void) const 
+\begin{DoxyCompactList}\small\item\em Informs the current list size. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classls_1_1vector_a0b17323cda5ab83ead28a6822e55f762}{capacity} (void) const 
+\begin{DoxyCompactList}\small\item\em Informs the list’s storage capacity. \end{DoxyCompactList}\item 
+bool \hyperlink{classls_1_1vector_a7bcf18bb76c73f49429beb9512fd7f77}{empty} (void) const 
+\begin{DoxyCompactList}\small\item\em Informs if the vector is empty or not. \end{DoxyCompactList}\item 
+bool \hyperlink{classls_1_1vector_adf628d0c76d7213c7a64d41d30a640c5}{full} (void) const 
+\begin{DoxyCompactList}\small\item\em Informs if the vector is full or not. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_a72d20c72613053a3f4bcf2e8e0a9da71}{clear} (void)\hypertarget{classls_1_1vector_a72d20c72613053a3f4bcf2e8e0a9da71}{}\label{classls_1_1vector_a72d20c72613053a3f4bcf2e8e0a9da71}
+
+\begin{DoxyCompactList}\small\item\em Remove (either logically or physically) all elements from the container. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_ad1a58fe0c99641781abdfa8e09e78d8a}{push\+\_\+back} (const T \&value\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds value to the front of the list. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_aa47709582bda7b077ecd872f9bcaab27}{push\+\_\+front} (const T \&value\+\_\+)
+\begin{DoxyCompactList}\small\item\em Adds value to the end of the list. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_a14f1f81fdf7c217436a711fc146dd468}{pop\+\_\+back} (void)\hypertarget{classls_1_1vector_a14f1f81fdf7c217436a711fc146dd468}{}\label{classls_1_1vector_a14f1f81fdf7c217436a711fc146dd468}
+
+\begin{DoxyCompactList}\small\item\em Removes the object at the end of the list. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_a70a3d59cfa4558d7efbb42f8a8e772d7}{pop\+\_\+front} (void)\hypertarget{classls_1_1vector_a70a3d59cfa4558d7efbb42f8a8e772d7}{}\label{classls_1_1vector_a70a3d59cfa4558d7efbb42f8a8e772d7}
+
+\begin{DoxyCompactList}\small\item\em Removes the object at the front of the list. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_aa883624fb03f14034911d0a0e3341f97}{reserve} (size\+\_\+t new\+\_\+cap)\hypertarget{classls_1_1vector_aa883624fb03f14034911d0a0e3341f97}{}\label{classls_1_1vector_aa883624fb03f14034911d0a0e3341f97}
+
+\begin{DoxyCompactList}\small\item\em Increase the storage capacity of the array to a value that’s is greater or equal to new\+\_\+cap. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_a9468a8d103dfe4b4979d26668cab9c63}{shrink\+\_\+to\+\_\+fit} (void)\hypertarget{classls_1_1vector_a9468a8d103dfe4b4979d26668cab9c63}{}\label{classls_1_1vector_a9468a8d103dfe4b4979d26668cab9c63}
+
+\begin{DoxyCompactList}\small\item\em Requests the removal of unused capacity. It is a non-\/binding request to reduce \hyperlink{classls_1_1vector_a0b17323cda5ab83ead28a6822e55f762}{capacity()} to \hyperlink{classls_1_1vector_a4a84ae30c023098a222fd9fac055284f}{size()}. \end{DoxyCompactList}\item 
+void \hyperlink{classls_1_1vector_a87ab7797a6d790b10bc3cd59a623307f}{assign} (const T \&value\+\_\+)
+\begin{DoxyCompactList}\small\item\em replaces the content of the list with copies of value\+\_\+. \end{DoxyCompactList}\item 
+const T \& \hyperlink{classls_1_1vector_ad352ce6f460b75679c513072f46df9b1}{back} (void) const 
+\item 
+const T \& \hyperlink{classls_1_1vector_aed4947977bcffd8d5de6f12dcc184783}{front} (void) const 
+\item 
+const T \& \hyperlink{classls_1_1vector_a2596646005e53dae4cd5b70e162753d9}{operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t pos) const 
+\item 
+T \& \hyperlink{classls_1_1vector_a117304c2fe77e2029c2cff192ee8408e}{operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t pos)
+\item 
+const T \& \hyperlink{classls_1_1vector_ada2e9b5c5a5c26fcff900b0535d552a6}{at} (size\+\_\+t pos) const 
+\item 
+T \& \hyperlink{classls_1_1vector_ae2991846c7bd6e784812b5fc4fde48d2}{at} (size\+\_\+t pos)
+\item 
+T $\ast$ \hyperlink{classls_1_1vector_af45c98122fbb8d63e53a4f33b2bc3124}{data} (void)
+\item 
+const T \& \hyperlink{classls_1_1vector_a53604239af9e47406e6c0abaa1d8a397}{data} (void) const 
+\item 
+void \hyperlink{classls_1_1vector_a3385ac2f08588740f6da7e5d6a1096c5}{print} (void) const \hypertarget{classls_1_1vector_a3385ac2f08588740f6da7e5d6a1096c5}{}\label{classls_1_1vector_a3385ac2f08588740f6da7e5d6a1096c5}
+
+\begin{DoxyCompactList}\small\item\em Prints the vector, your length and capacity. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classls_1_1vector}{vector}$<$ T $>$ \&vector\+\_\+) const \hypertarget{classls_1_1vector_aed89d4f7a583b5052ef2300c3119a01c}{}\label{classls_1_1vector_aed89d4f7a583b5052ef2300c3119a01c}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classls_1_1vector}{vector}$<$ T $>$ \&vector\+\_\+) const \hypertarget{classls_1_1vector_ab311be0ea74e243dddd556983a5c984f}{}\label{classls_1_1vector_ab311be0ea74e243dddd556983a5c984f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ls\+::vector@{ls\+::vector}!vector@{vector}}
+\index{vector@{vector}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{vector(size\+\_\+t sz\+\_\+)}{vector(size_t sz_)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ vector\+::vector (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{sz\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_ac88b18c028485be68b3916bde93d7e19}{}\label{classls_1_1vector_ac88b18c028485be68b3916bde93d7e19}
+
+
+Constructs the list with logical size setted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+\_\+} & Size that the vector should have. \\
+\hline
+\end{DoxyParams}
+\index{ls\+::vector@{ls\+::vector}!vector@{vector}}
+\index{vector@{vector}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{vector(const vector$<$ T $>$ \&vector\+\_\+)}{vector(const vector< T > &vector_)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ vector\+::vector (
+\begin{DoxyParamCaption}
+\item[{const {\bf vector}$<$ T $>$ \&}]{vector\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_acf68a9a46e2398917f7f87cb6d6ef214}{}\label{classls_1_1vector_acf68a9a46e2398917f7f87cb6d6ef214}
+
+
+Copy constructor. Constructs the list with the deep copy of the contents of other vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+} & vector that will be copyed. \\
+\hline
+\end{DoxyParams}
+\index{ls\+::vector@{ls\+::vector}!vector@{vector}}
+\index{vector@{vector}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{vector(std\+::initializer\+\_\+list$<$ T $>$ ilist)}{vector(std::initializer_list< T > ilist)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ vector\+::vector (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ T $>$}]{ilist}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_a26daeb7a8d46fd1d4036ede13599e97c}{}\label{classls_1_1vector_a26daeb7a8d46fd1d4036ede13599e97c}
+
+
+Constructs the list with the contents of the initializer list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ilist} & initializer list. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{ls\+::vector@{ls\+::vector}!assign@{assign}}
+\index{assign@{assign}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{assign(const T \&value\+\_\+)}{assign(const T &value_)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void vector\+::assign (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_a87ab7797a6d790b10bc3cd59a623307f}{}\label{classls_1_1vector_a87ab7797a6d790b10bc3cd59a623307f}
+
+
+replaces the content of the list with copies of value\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+\_\+} & The value to be replaced. \\
+\hline
+\end{DoxyParams}
+\index{ls\+::vector@{ls\+::vector}!at@{at}}
+\index{at@{at}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{at(size\+\_\+t pos) const }{at(size_t pos) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const T \& vector\+::at (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{pos}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_ada2e9b5c5a5c26fcff900b0535d552a6}{}\label{classls_1_1vector_ada2e9b5c5a5c26fcff900b0535d552a6}
+\begin{DoxyReturn}{Returns}
+The const object at the index pos in the array, with bounds-\/checking. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!at@{at}}
+\index{at@{at}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{at(size\+\_\+t pos)}{at(size_t pos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T \& vector\+::at (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_ae2991846c7bd6e784812b5fc4fde48d2}{}\label{classls_1_1vector_ae2991846c7bd6e784812b5fc4fde48d2}
+\begin{DoxyReturn}{Returns}
+The object at the index pos in the array, with bounds-\/checking. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!back@{back}}
+\index{back@{back}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{back(void) const }{back(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const T \& vector\+::back (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_ad352ce6f460b75679c513072f46df9b1}{}\label{classls_1_1vector_ad352ce6f460b75679c513072f46df9b1}
+\begin{DoxyReturn}{Returns}
+The object at the end of the list. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!capacity@{capacity}}
+\index{capacity@{capacity}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{capacity(void) const }{capacity(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\+\_\+t vector\+::capacity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_a0b17323cda5ab83ead28a6822e55f762}{}\label{classls_1_1vector_a0b17323cda5ab83ead28a6822e55f762}
+
+
+Informs the list’s storage capacity. 
+
+\begin{DoxyReturn}{Returns}
+The internal storage capacity of the array. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!data@{data}}
+\index{data@{data}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{data(void)}{data(void)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ vector\+::data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_af45c98122fbb8d63e53a4f33b2bc3124}{}\label{classls_1_1vector_af45c98122fbb8d63e53a4f33b2bc3124}
+\begin{DoxyReturn}{Returns}
+A pointer to the first element in the array used internally by the vector. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!data@{data}}
+\index{data@{data}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{data(void) const }{data(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const T \& vector\+::data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_a53604239af9e47406e6c0abaa1d8a397}{}\label{classls_1_1vector_a53604239af9e47406e6c0abaa1d8a397}
+\begin{DoxyReturn}{Returns}
+A const pointer to the first element in the array used internally by the vector. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!empty@{empty}}
+\index{empty@{empty}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{empty(void) const }{empty(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool vector\+::empty (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_a7bcf18bb76c73f49429beb9512fd7f77}{}\label{classls_1_1vector_a7bcf18bb76c73f49429beb9512fd7f77}
+
+
+Informs if the vector is empty or not. 
+
+\begin{DoxyReturn}{Returns}
+True if the container contains no elements, and false otherwise. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!front@{front}}
+\index{front@{front}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{front(void) const }{front(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const T \& vector\+::front (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_aed4947977bcffd8d5de6f12dcc184783}{}\label{classls_1_1vector_aed4947977bcffd8d5de6f12dcc184783}
+\begin{DoxyReturn}{Returns}
+The object at the beginning of the list. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!full@{full}}
+\index{full@{full}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{full(void) const }{full(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool vector\+::full (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_adf628d0c76d7213c7a64d41d30a640c5}{}\label{classls_1_1vector_adf628d0c76d7213c7a64d41d30a640c5}
+
+
+Informs if the vector is full or not. 
+
+\begin{DoxyReturn}{Returns}
+True if the container has reached its capacity, and false otherwise. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{operator[](size\+\_\+t pos) const }{operator[](size_t pos) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const T \& vector\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{pos}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_a2596646005e53dae4cd5b70e162753d9}{}\label{classls_1_1vector_a2596646005e53dae4cd5b70e162753d9}
+\begin{DoxyReturn}{Returns}
+The const object at the index pos in the array, with no bounds-\/checking. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{operator[](size\+\_\+t pos)}{operator[](size_t pos)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T \& vector\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_a117304c2fe77e2029c2cff192ee8408e}{}\label{classls_1_1vector_a117304c2fe77e2029c2cff192ee8408e}
+\begin{DoxyReturn}{Returns}
+The object at the index pos in the array, with no bounds-\/checking. 
+\end{DoxyReturn}
+\index{ls\+::vector@{ls\+::vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{push\+\_\+back(const T \&value\+\_\+)}{push_back(const T &value_)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void vector\+::push\+\_\+back (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_ad1a58fe0c99641781abdfa8e09e78d8a}{}\label{classls_1_1vector_ad1a58fe0c99641781abdfa8e09e78d8a}
+
+
+Adds value to the front of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+\_\+} & The value to add. \\
+\hline
+\end{DoxyParams}
+\index{ls\+::vector@{ls\+::vector}!push\+\_\+front@{push\+\_\+front}}
+\index{push\+\_\+front@{push\+\_\+front}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{push\+\_\+front(const T \&value\+\_\+)}{push_front(const T &value_)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void vector\+::push\+\_\+front (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classls_1_1vector_aa47709582bda7b077ecd872f9bcaab27}{}\label{classls_1_1vector_aa47709582bda7b077ecd872f9bcaab27}
+
+
+Adds value to the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+\_\+} & The value to add. \\
+\hline
+\end{DoxyParams}
+\index{ls\+::vector@{ls\+::vector}!size@{size}}
+\index{size@{size}!ls\+::vector@{ls\+::vector}}
+\subsubsection[{\texorpdfstring{size(void) const }{size(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\+\_\+t vector\+::size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classls_1_1vector_a4a84ae30c023098a222fd9fac055284f}{}\label{classls_1_1vector_a4a84ae30c023098a222fd9fac055284f}
+
+
+Informs the current list size. 
+
+\begin{DoxyReturn}{Returns}
+The number of elements in the container. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{vector_8h}{vector.\+h}\item 
+src/\hyperlink{vector_8cpp}{vector.\+cpp}\end{DoxyCompactItemize}

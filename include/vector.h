@@ -41,24 +41,25 @@ namespace ls
 		/*! @brief Destructs the list. */
 		~vector();
 
+		/*! @brief Copy constructor. Constructs the list with the deep copy of the contents of other vector. 
+			@param vector_ vector that will be copyed. */
 		vector( const vector<T> & vector_ );
 
-		//vector( vector<T> && vector_ );
-
+		/*! @brief Constructs the list with the contents of the initializer list. 
+			@param ilist initializer list. */
 		vector( std::initializer_list<T> ilist );
 
-		//template < typename InputItr >
-
-		//vector( InputItr, InputItr );
-
-		//vector & operator=( const vector<T> & vector_ );
-
-		//vector & operator=( vector<T> && vector_ );
-
-		//vector & operator=( std::initializer_list<T> ilist );
+		/* ---------- missing ----------
+		vector( vector<T> && vector_ );
+		template < typename InputItr >
+		vector( InputItr, InputItr );
+		vector & operator=( const vector<T> & vector_ );
+		vector & operator=( vector<T> && vector_ );
+		vector & operator=( std::initializer_list<T> ilist );*/
 
 		// [II] ITERATORS
-		/*iterator begin( void );
+		/* ---------- missing ----------
+		iterator begin( void );
 		iterator end( void );
 		const_iterator cbegin( void ) const;
 		const_iterator cend( void ) const;*/
@@ -81,24 +82,17 @@ namespace ls
 		bool full( void ) const;
 
 
-// [IV] MODIFIERS
-		/*ok void clear( void );
-		ok void push_front( const_reference );
-		ok void push_back( const_reference );
-		ok void pop_back( void );
-		ok void pop_front( void );
-	iterator insert( iterator , const_reference );
-	template < typename InputItr >
-	iterator insert( iterator , InputItr , InputItr );
-	iterator insert( iterator, std::initializer_list< value_type > );
-		ok void reserve( size_type );
-		OK void shrink_to_fit( void );
-		ok void assign( const_reference );
-	void assign( std::initializer_list<T> );
-	template < typename InputItr >
-	void assign( InputItr, InputItr );
-	iterator erase( iterator, iterator );
-	iterator erase( iterator );*/
+		// [IV] MODIFIERS
+		/* ---------- missing ----------
+		iterator insert( iterator , const_reference );
+		template < typename InputItr >
+		iterator insert( iterator , InputItr , InputItr );
+		iterator insert( iterator, std::initializer_list< value_type > );
+		void assign( std::initializer_list<T> );
+		template < typename InputItr >
+		void assign( InputItr, InputItr );
+		iterator erase( iterator, iterator );
+		iterator erase( iterator );*/
 
 		/*! @brief Remove (either logically or physically) all elements from the container. */
 		void clear( void );
@@ -161,7 +155,8 @@ namespace ls
 		bool operator!=( const vector<T> & vector_ ) const;
 
 		// [VII] FRIEND FUNCTIONS
-		/*friend std::ostream & operator<<( std::ostream & os_, const vector<T> & v_ );
+		/* ---------- missing ----------
+		friend std::ostream & operator<<( std::ostream & os_, const vector<T> & v_ );
 		friend void swap( vector<T> & first_, vector<T> & second_ );*/
 
 	};

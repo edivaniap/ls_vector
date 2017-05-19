@@ -9,7 +9,7 @@ Implementation of a class called **vector** that follows the list ADT design des
 - [X] Element access
 - [X] Capacity
 - [X] Some Modifiers
-- [X] Some Operators
+- [X] All Operators
 - [ ] All Iterators
 - [ ] All Friend Functions
 
