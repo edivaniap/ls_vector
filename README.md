@@ -23,11 +23,12 @@ Implementation of a class called **vector** that follows the list ADT design des
 
 # Git repository
 
-[**projetos.imd.ufrn.br/edivaniap/ls_vector**](http://projetos.imd.ufrn.br/edivaniap/ls_vector)
-
+[**projetos.imd.ufrn.br/edivaniap/ls_vector**](http://projetos.imd.ufrn.br/edivaniap/ls_vector)  
+[**github.com/vaniati/ls_vector**](https://github.com/vaniati/ls_vector)
 
 # Authorship
 
 Program developed by _Edivânia Pontes de Oliveira_ (< *edivaniap@ufrn.edu.br* >), 2017.1
+Guided by _Selan R. dos Santos_
 
 &copy; IMD/UFRN 2017.
